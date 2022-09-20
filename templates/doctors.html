@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+    <section class="row page_intro">
+        <div class="row m0 inner">
+            <div class="container">
+                <div class="row">
+                    <h5>quality assurance</h5>
+                    <h2>experienced doctors</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row breadcrumbRow">
+        <div class="container">
+            <div class="row inner m0">
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'Appointment:index' %}">Home</a></li>
+                    <li>doctor</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row team_section_type2 bgf">
+
+        {% for doc in specialization %}
+        <div class="container">           
+            <div class="row m0 titleRow text-left">
+                <h5>doctor</h5>
+
+                <h2>general health care</h2>
+            </div>
+            {% for docs in doc_info %}
+            {% if docs.specialization_id  == doc.name %}
+            <div class="row dorctors_row">
+                <div class="col-sm-6 col-md-3 team_member">
+                    <div class="row m0 inner">
+                        <a href="{{docs.get_absolute_url}}">
+                            <div class="row m0 image"><img src="{{docs.profile_pic.url}}" alt="" class="img-responsive"></div>
+                            <div class="row m0 title_row">
+                                <h5>DR. {{docs.name}}</h5>
+                                <div class="row m0 pos">{{docs.specialization_id}}</div>
+                            </div>
+                        </a>
+
+                        <ul class="social_list">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+        </div>
+        {% endfor %}
+    </section>
+    
+{#    <section class="row book_banner">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-8 col-md-9">#}
+{#                    <div class="row m0">#}
+{#                        <h3 class="bannerTitle">ONLINE HASSLE FREE Appointment BOOKING</h3>#}
+{#                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu vulputate pulvinar,</h5>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 col-md-3">#}
+{#                    <div class="row m0">#}
+{#                        <a href="#appointment" class="view_all">book your appointment</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    {% endblock %}

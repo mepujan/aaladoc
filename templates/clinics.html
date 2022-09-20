@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="row page_intro">
+        <div class="row m0 inner">
+            <div class="container">
+                <div class="row">
+                    <h5>quality assurance</h5>
+                    <h2>Hospitals and Clinics</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row breadcrumbRow">
+        <div class="container">
+            <div class="row inner m0">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Clinics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="row team_section_type2 bgf">
+
+        {% for doc in clinic_location %}
+        <div class="container">
+            <div class="row m0 titleRow text-left">
+                <h5>Clinics</h5>
+
+                <h2>{{doc.address}}</h2>
+            </div>
+            {% for docs in clinic_info %}
+            {% if docs.city_id  == doc.address_id %}
+            <div class="row dorctors_row">
+                <div class="col-sm-6 col-md-3 team_member">
+                    <div class="row m0 inner">
+                        <a href="doctor-details.html">
+                            <div class="row m0 image"><img src="{{docs.image}}" alt="" class="img-responsive"></div>
+                            <div class="row m0 title_row">
+                                <h5>{{docs.clinic_id}}</h5>
+                                <div class="row m0 pos">{{docs.locality_id}}</div>
+                            </div>
+                        </a>
+
+                        <ul class="social_list">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="row book_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-9">
+                    <div class="row m0">
+                        <h3 class="bannerTitle">ONLINE HASSLE FREE Appointment BOOKING</h3>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu vulputate pulvinar,</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="row m0">
+                        <a href="#appointment" class="view_all">book your appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

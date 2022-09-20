@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aladoc | Your OneStop Solution Medical Services</title>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Bootstrap and Other Vendors-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl.carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl.carousel/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/flexslider/flexslider.css' %}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/bootstrap-datepicker/css/datepicker3.css' %}"
+          media="screen">
+
+    <!--RS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/rs-plugin/css/settings.css' %}" media="screen">
+
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+
+    <!--Mechanic Styles-->
+    <link rel="stylesheet" href="{% static 'css/default/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive/responsive.css' %}">
+
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="{% static 'vendors/rs-plugin/css/settings-ie8.css' %}" media="screen">
+      <script src="{% static 'js/html5shiv.min.js' %}"></script>
+      <script src="{% static 'js/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+<body class="default home2">
+
+<section class="row top_bar">
+    <div class="container">
+        <div class="row m0">
+            <div class="fleft schedule"><strong><i class="fa fa-clock-o"></i> Schedule</strong>: Monday - Saturday -
+                Any Time Online
+            </div>
+            <div class="fright contact_info">
+                <div class="fleft email"><img src="{% static 'images/icons/envelope.jpg' %}" alt=""> info@aladoc.com
+                </div>
+                <div class="fleft phone"><i class="fa fa-phone"></i> <strong>9800000000</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav class="navbar navbar-default navbar-static-top navbar2">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'Appointment:index' %}"><img src="{% static 'images/logo/aaladoclogo.png' %}"
+                                                                              alt="" width = 50 height = 50></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav"
+                    aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="book-appointment.html" class="navbar-toggle visible-xs" data-toggle="modal"
+               data-target="#appointmefnt_form_pop">book appointment</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'Appointment:index' %}">Home</a></li>
+                {#                <li class="active dropdown">#}
+                {#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"#}
+                {#                       aria-expanded="false">Home</a>#}
+                {#
+                {#                </li>#}
+                <li><a href="{% url 'Services:services' %}">services</a></li>
+                {#                <li class="dropdown">#}
+                {#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">services</a>#}
+                {#                    <ul class="dropdown-menu">#}
+                {#                        <li><a href="{% url 'Appointment:services' %}">services</a></li>#}
+                {#                        <li><a href="{% url 'Appointment:singleService' %}">single service</a></li>#}
+                {#                    </ul>#}
+                {#                </li>#}
+                <li><a href="{% url 'Doctor:doctor' %}">doctors</a></li>
+                {#                <li class="dropdown">#}
+                {#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">doctors</a>#}
+                {#                    <ul class="dropdown-menu" role="menu">#}
+                {#                        <li><a href="{% url 'Doctor:doctor' %}">doctors</a></li>#}
+                {#                        <li><a href="doctor-details.html">doctor details</a></li>#}
+                {#                    </ul>#}
+                {#                </li>#}
+<!--                <li><a href="{% url 'Doctor:time_table' %}">Time Table</a></li>-->
+
+                <li><a href="{% url 'Forum:forum' %}">Blog</a></li>
+{#                <li class="dropdown">#}
+{#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"#}
+{#                       aria-expanded="false">blog</a>#}
+<!--{#                    <ul class="dropdown-menu" role="menu">#}-->
+<!--{#                        <li><a href="{% url 'Forum:forum' %}">Blog version 1</a></li>#}-->
+<!--{#                        <li><a href="{% url 'Forum:userqa' %}">Blog version 2</a></li>#}-->
+<!--{#                        <li><a href="single-post.html">Single Post</a></li>#}-->
+<!--{#                    </ul>#}-->
+{#                </li>#}
+                <li><a href="{% url 'Appointment:contact' %}">contact</a></li>
+                <li class="hidden-xs book"><a href="#" data-toggle="modal" data-target="#appointmefnt_form_pop">book
+                    appointment</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+{% block content %}
+
+{% endblock %}
+<section class="row book_banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-9">
+                <div class="row m0">
+                    <h3 class="bannerTitle">ONLINE Appointment BOOKING</h3>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu
+                        vulputate pulvinar,</h5>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <div class="row m0">
+                    <a href="#" data-toggle="modal" data-target="#appointmefnt_form_pop" class="view_all">book your
+                        appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-6 col-lg-5 footer_menuList">
+                <div class="heading row m0"><img src="{% static 'images/logo/1.png' %}" alt=""></div>
+                <div class="row menuList">
+                    <ul class="firstOrderList nav">
+                        <li class="active"><a href="#">home</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">doctors</a></li>
+                        <li><a href="#">department</a></li>
+
+                    </ul>
+                    <ul class="secondOrderList nav">
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">faq</a></li>
+
+                    </ul>
+                    <ul class="thirdOrderList nav">
+                        <li><a href="#">terms &amp; condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">legal desclaimer</a></li>
+                        <li><a href="#">sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-6 col-lg-3 footer_address">
+                <div class="heading row m0"></div>
+                <div class="row address m0">
+                    <div class="media address_line">
+                        <div class="media-left icon"><i class="fa fa-map-marker"></i></div>
+                        <div class="media-body address_text">Maharajgaung, <br>Kathmandu Nepal</div>
+                    </div>
+                    <div class="media address_line">
+                        <div class="media-left icon"><i class="fa fa-envelope"></i></div>
+                        <div class="media-body address_text">info@aaladoc.com</div>
+                    </div>
+                    <div class="media address_line">
+                        <div class="media-left icon"><i class="fa fa-phone"></i></div>
+                        <div class="media-body address_text">9800000000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 newsletter">
+                <div class="heading row m0">
+                    <h3>SIGNUP NEWSLETTER</h3>
+                </div>
+                <form action="#" class="row m0 newsletterForm">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                    <input type="email" class="form-control" placeholder="Enter your Email Address">
+                    <input type="submit" class="form-control" value="submit">
+                </form>
+            </div>
+        </div>
+        <div class="row m0 footer_bottom">
+            <ul class="list-inline social_menu m0 fleft">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+            <div class="fright copyright">&copy; <a href="index.html">Aladoc 2020</a>. Made with love for great people.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="appointmefnt_form_pop" tabindex="-1" role="dialog" aria-labelledby="appointmefnt_form_pop">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form action="#" class="row m0 appointment_home_form2">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times-circle-o"></i>
+                </button>
+                <h2 class="title">BOOK<br>NOW</h2>
+                <div class="form_inputs row m0">
+                    <div class="row m0 input_row">
+                        <div class="col-sm-12 col-md-12 col-lg-6 p0">
+                            <label for="app_fname">First Name</label>
+                            <input type="text" class="form-control" id="app_fname" placeholder="Your First Name">
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 p0">
+                            <label for="app_lname">Last Name</label>
+                            <input type="text" class="form-control" id="app_lname" placeholder="Your Last Name">
+                        </div>
+                    </div>
+                    <div class="row m0 input_row">
+                        <label for="app_email">Email Address</label>
+                        <input type="email" class="form-control" id="app_email" placeholder="Enter your Email Address">
+                    </div>
+                    <div class="row m0 input_row">
+                        <label for="app_phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="app_phone" placeholder="Enter your Phone Number">
+                    </div>
+                    <div class="row m0 input_row">
+                        <label for="app_date">Booking Date</label>
+                        <div class="input-append date">
+                            <input type="text" class="form-control" name="date" id="app_date"
+                                   placeholder="Select the Appointment Date">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                    <div class="row m0 input_row">
+                        <label for="app_texts">Message</label>
+                        <textarea id="app_texts" class="form-control" placeholder="Write down the Message"></textarea>
+                    </div>
+                    <input type="submit" class="form-control" value="book your appointment now">
+                </div>
+                <div class="row m0 form_footer">
+                    <a href="#"><img src="{% static 'images/call-now3.png' %}" alt="">9867665654</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--jQuery, Bootstrap and other vendor JS-->
+
+<!--jQuery-->
+<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+
+<!--Bootstrap JS-->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!--Owl Carousel-->
+<script src="{% static 'vendors/owl.carousel/js/owl.carousel.min.js' %}"></script>
+
+<!--Counter Up-->
+<script src="{% static 'vendors/counterup/jquery.counterup.min.js' %}"></script>
+
+<!--Waypoints-->
+<script src="{% static 'vendors/waypoints/waypoints.min.js' %}"></script>
+
+<!--Bootstrap Date-->
+<script src="{% static 'vendors/bootstrap-datepicker/js/bootstrap-datepicker.js' %}"></script>
+
+<!--FlexSlider-->
+<script src="{% static 'vendors/flexslider/jquery.flexslider-min.js' %}"></script>
+
+<!--RV-->
+<script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<!--Strella JS-->
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/revs.js' %}"></script>
+</body>
+</html>

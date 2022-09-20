@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="row page_intro">
+        <div class="row m0 inner">
+            <div class="container">
+                <div class="row">
+                    <h5>quality assurance</h5>
+                    <h2>experienced doctors</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% for doc in doc_details %}
+    <section class="row breadcrumbRow">
+        <div class="container">
+            <div class="row inner m0">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html">Doctor</a></li>
+                    <li>Dr. {{doc.name}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row doctor_details">
+        <div class="container">           
+            <div class="row">
+                <div class="col-sm-12 col-md-9 doctor_about">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 image"><img src="{{doc.profile_pic.url}}" alt="" class="img-responsive"></div>
+                        <div class="col-sm-12 col-md-8 texts">
+                            <div class="heading row m0">
+                                <div class="fleft name_pos">
+                                    <h3>DR. {{doc.name}}</h3>
+                                    <h5>{{doc.specialization}}</h5>
+                                </div>
+                                <ul class="fright social_list">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                            <p>{{doc.short_bio}}</p>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-sm-12 col-md-3 sidebar doctor_details_sidebar">
+                    <div class="row m0 widget speciality">
+                        <h5 class="widget_heading">Speciality</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-angle-right"></i>general health care</li>
+                            <li><i class="fa fa-angle-right"></i>rehabilitation center</li>
+                            <li><i class="fa fa-angle-right"></i>cancer care</li>
+                        </ul>
+                        <a href="{{doc.get_appointment_url}}" class="view_all">book appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row doctor_cv">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 cv_widget address">
+                    <h5 class="heading">Address</h5>
+                    <div class="row m0">
+                        1024 Micheld Avenue <br>Suite 2015 <br>Logan, 123456
+                    </div>
+                </div>
+                <div class="col-sm-4 cv_widget education">
+                    <h5 class="heading">educations</h5>
+                    <div class="row m0">
+                        University of North Medical Hill <br>
+                        Texas Tech School of lorem Ipsum
+                    </div>
+                </div>
+                <div class="col-sm-4 cv_widget awards">
+                    <h5 class="heading">awards &amp; recognition</h5>
+                    <div class="row m0">
+                        Country Monthly Top Doctor (2015)
+                    </div>
+                </div>
+                <div class="col-sm-4 cv_widget office_hours">
+                    <h5 class="heading">office hours</h5>
+                    <div class="row m0">
+                        Monday, tuesday and Thursday <br>
+                        <strong>8 am - 5pm,</strong> <br>
+                        Wednesday and friday <br>
+                        <strong>8 am -3pm</strong>
+                    </div>
+                </div>
+                <div class="col-sm-4 cv_widget certifications">
+                    <h5 class="heading">certification(s)</h5>
+                    <div class="row m0">
+                        Board of Lorem Psum University. <br>
+                        Board of Cancer Center University
+                    </div>
+                </div>
+                <div class="col-sm-4 cv_widget contact_info">
+                    <h5 class="heading">contact info</h5>
+                    <div class="row m0">
+                        800 - 123 - 4567 <br>
+                        info@medicalpro.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{#    <section class="row book_banner">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-8 col-md-9">#}
+{#                    <div class="row m0">#}
+{#                        <h3 class="bannerTitle">ONLINE HASSLE FREE Appointment BOOKING</h3>#}
+{#                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu vulputate pulvinar,</h5>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 col-md-3">#}
+{#                    <div class="row m0">#}
+{#                        <a href="#appointment" class="view_all">book your appointment</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    {% endfor %}
+{% endblock %}

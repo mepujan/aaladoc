@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+    <section class="row page_intro">
+        <div class="row m0 inner">
+            <div class="container">
+                <div class="row">
+                    <h5>blog new</h5>
+                    <h2>What’s new in medicalpro</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row breadcrumbRow">
+        <div class="container">
+            <div class="row inner m0">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="row content_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 blog_list">
+                {% for blog in blogs %}
+                    <div class="media blog">                        
+                        <div class="media-left">
+                            <a href="{{blog.get_absolute_url}}"><img src="{{blog.image.url}}" alt="{{blog.category}}" class="img-reponsive"></a>
+                        </div>
+                        <div class="media-body">
+                            <a href="{{blog.get_absolute_url}}"><h3>{{blog.title | safe}}</h3></a>
+                            <div class="row m0 meta">By : <a href="#">{{blog.written_by}}</a> on : <a href="#">{{blog.date}}</a> comments: (<a href="{{blog.get_absolute_url}}" class="comment_amount">{{blog.no_comments}}</a>)</div>
+                            <p>{{blog.body | safe}}</p>
+                            
+                            <a href="{{blog.get_absolute_url}}" class="view_all">read more</a>
+                        </div>
+                    </div> <!--single blog-->
+
+                {% endfor %}
+                    <div class="row paginationRow">
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 sidebar">
+                    <form action="#" class="row m0 search_form widget">
+                        <h5 class="widget_heading">search</h5>
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search here">
+                            <span class="input-group-addon"><button type="submit">go</button></span>
+                        </div>
+                    </form>
+                    <div class="row m0 widget categories">
+                        <h5 class="widget_heading">Category</h5>
+                        <ul class="list-unstyled">
+                            {% for cat in categories %}
+                            <li><a href="{{cat.get_absolute_cat_url}}">{{cat.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="row m0 widget recent_posts">
+                        <h5 class="widget_heading">Trending post</h5>
+                        {% for trend in trending %}
+                        <div class="media recent_post">
+                            <div class="media-left">
+                                <a href="{{blog.get_absolute_url}}"><img src="{{trend.image.url}}" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <a href="single-post.html"><h5>{{trend.title}}</h5></a>
+                                <p>on: <a href="single-post.html">{{trend.date}}</a></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row m0 widget tags">
+                        <h5 class="widget_heading">Tags</h5>
+                        <div class="row m0 tag_list">
+                            <a href="#" class="tag">medical</a>
+                            <a href="#" class="tag">research</a>
+                            <a href="#" class="tag">doctor</a>
+                            <a href="#" class="tag">research</a>
+                            <a href="#" class="tag">nurology</a>
+                            <a href="#" class="tag">dental</a>
+                            <a href="#" class="tag">care</a>
+                            <a href="#" class="tag">dental</a>
+                            <a href="#" class="tag">care</a>
+                            <a href="#" class="tag">dental</a>
+                            <a href="#" class="tag">nurology</a>
+                            <a href="#" class="tag">dental</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{#    <section class="row book_banner">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-8 col-md-9">#}
+{#                    <div class="row m0">#}
+{#                        <h3 class="bannerTitle">ONLINE HASSLE FREE Appointment BOOKING</h3>#}
+{#                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu vulputate pulvinar,</h5>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 col-md-3">#}
+{#                    <div class="row m0">#}
+{#                        <a href="#" data-toggle="modal" data-target="#appointmefnt_form_pop" class="view_all">book your appointment</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    {% endblock %}

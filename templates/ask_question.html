@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="row page_intro">
+        <div class="row m0 inner">
+            <div class="container">
+                <div class="row">
+                    <h5>contact us</h5>
+                    <h2>Ask Questions with our doctor</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row breadcrumbRow">
+        <div class="container">
+            <div class="row inner m0">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Ask Question</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="row contact_form_row">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 contact_form_area">
+                    <h3 class="contact_section_title">Ask your Questions with Us.</h3>
+                    <div class="contactForm row m0">
+                        <form  method = "POST" class="row contact_form" id="contactForm" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            <div class="row m0">
+                                <div class="col-sm-12">
+                                    <label for="contact_fmsg">Question</label>
+                                    <textarea name="question" id="contact_fmsg" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="row m0">
+                                <div class="col-sm-12">
+                                    <label for="Category" >Category</label>
+                                    <select id="Category" class="form-control">
+
+                                      <option value="volvo">Volvo</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row m0">
+                                <div class="col-sm-12">
+                                    <input type="file"  name="images">
+                                </div>
+                            </div>
+                            <div class="row m0">
+                                <div class="col-sm-12">
+                                    <input type="submit" class="submit_btn" value="submit">
+                                </div>
+                            </div>
+                        </form>
+                        <div id="success">
+                            <span class="green textcenter">
+                                Your message was sent successfully! I will be in touch as soon as I can.
+                            </span>
+                        </div>
+                        <div id="error">
+                            <span>
+                                Something went wrong, try refreshing and submitting the form again.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 contact_address">
+                    <h3 class="contact_section_title">Address</h3>
+                    <div class="row address m0">
+                        <div class="media address_line">
+                            <div class="media-left icon"><i class="fa fa-map-marker"></i></div>
+                            <div class="media-body address_text">Area  51 , Some near unknown, <br>USA 000000</div>
+                        </div>
+                        <div class="media address_line">
+                            <div class="media-left icon"><i class="fa fa-envelope"></i></div>
+                            <div class="media-body address_text">info@medicalprotheme.com</div>
+                        </div>
+                        <div class="media address_line">
+                            <div class="media-left icon"><i class="fa fa-phone"></i></div>
+                            <div class="media-body address_text">123 7890 456</div>
+                        </div>
+                        <a href="#" class="view_all">get directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row map_row">
+        <div class="container">
+            <h3 class="contact_section_title">Direction</h3>
+            <div id="mapBox" class="row m0"></div>
+        </div>
+    </section>
+
+    <section class="row book_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-9">
+                    <div class="row m0">
+                        <h3 class="bannerTitle">ONLINE HASSLE FREE Appointment BOOKING</h3>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, ipsum eu vulputate pulvinar,</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="row m0">
+                        <a href="#appointment" class="view_all">book your appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

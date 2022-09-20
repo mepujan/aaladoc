@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aladoc | Your OneStop Solution Medical Services</title>
+
+    <!--Favicons-->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="200x500"
+      href="images/logo/logo.png"
+    />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--Bootstrap and Other Vendors-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendors/owl.carousel/css/owl.carousel.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendors/owl.carousel/css/owl.theme.default.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{%static 'vendors/flexslider/flexslider.css' %}"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendors/bootstrap-datepicker/css/datepicker3.css' %}"
+      media="screen"
+    />
+
+    <!--RS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'vendors/rs-plugin/css/settings.css' %}"
+      media="screen"
+    />
+
+    <!--Fonts-->
+    <link
+      href="http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--Mechanic Styles-->
+    <link rel="stylesheet" href="{% static 'css/default/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive/responsive.css' %}" />
+
+    <!--[if lt IE 9]>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="vendors/rs-plugin/css/settings-ie8.css"
+        media="screen"
+      />
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="default home2">
+    <section class="row top_bar">
+      <div class="container">
+        <div class="row m0">
+          <div class="fleft schedule">
+            <strong><i class="fa fa-clock-o"></i> Schedule</strong>: Monday -
+            Saturday - Any Time Online
+          </div>
+          <div class="fright contact_info">
+            <div class="fleft email">
+              <img src="images/icons/envelope.jpg" alt="" />
+              info@aladoc.com
+            </div>
+            <div class="fleft phone">
+              <i class="fa fa-phone"></i> <strong>123 7890 456</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-default navbar-static-top navbar2">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html"
+            ><img src="{% static 'images/logo/logo.png' %}" alt=""
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#main_nav"
+            aria-expanded="false"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            href="book-appointment.html"
+            class="navbar-toggle visible-xs"
+            data-toggle="modal"
+            data-target="#appointmefnt_form_pop"
+            >book appointment</a
+          >
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main_nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active dropdown">
+              <a href="" class="dropdown-toggle" role="button"
+                >Home</a
+              >
+            </li>
+
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" role="button"
+                >Our Team</a
+              >
+            </li>
+
+            <li><a href="">contact</a></li>
+            <li class="hidden-xs book">
+              <a href="#" data-toggle="modal" data-target="#appointment"
+                >book appointment</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <section class="row bannercontainer p0">
+      <div class="preloader">
+        <img src="{% static 'vendors/rs-plugin/assets/loader.gif' %}" alt="" />
+      </div>
+      <div class="row m0 banner main_slider">
+        <ul>
+          <li
+            data-transition="random"
+            data-slotamount="7"
+            data-masterspeed="200"
+            class="first-slide"
+          >
+            <!--Main Image-->
+            <img
+              src="{% static 'images/slider/homepage1/banner-1.jpg' %}"
+              alt="Main Image 1"
+              data-bgfit="cover"
+              data-bgposition="center top"
+              data-bgrepeat="no-repeat"
+            />
+            <!--Main Image-->
+            <div class="container">
+              <div
+                class="heading tp-caption random fade"
+                data-speed="3000"
+                data-start="500"
+                data-easing="Cubic.easeInOut"
+              >
+                one-stop solution <br />
+                medical services
+              </div>
+              <!--layer1-->
+              <div
+                class="para tp-caption slideleft incube"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeOutBounce"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                <br />
+                Etiam sed augue vitae ex vulputate venenatis.
+              </div>
+              <!--layer2-->
+              <div
+                class="link tp-caption slideup slideup"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeInQuad"
+              >
+                <div class="download-btn-sec">
+                  <div class="download-btn">
+                    <a href="#">
+                      <img src="{% static 'images/icons/playstore.svg' %}" />
+                      <div class="text">
+                        <span
+                          >Get it on the <br /><strong
+                            >Google Play</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="download-btn">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                    >
+                      <img src="{% static 'images/icons/app.svg' %}" />
+                      <div class="text">
+                        <span
+                          >Available on the <br /><strong
+                            >App Store</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--layer 3-->
+            </div>
+          </li>
+          <!--Slide-->
+          <li
+            data-transition="random"
+            data-slotamount="7"
+            data-masterspeed="200"
+            class="first-slide"
+          >
+            <!--Main Image-->
+            <img
+              src="{% static 'images/slider/homepage1/banner-2.jpg' %}"
+              alt="Main Image 2"
+              data-bgfit="cover"
+              data-bgposition="center top"
+              data-bgrepeat="no-repeat"
+            />
+            <!--Main Image-->
+            <div class="container">
+              <div
+                class="heading tp-caption random fade"
+                data-speed="3000"
+                data-start="500"
+                data-easing="Cubic.easeInOut"
+              >
+                one-stop solution <br />
+                medical services
+              </div>
+              <!--layer1-->
+              <div
+                class="para tp-caption slideleft incube"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeOutBounce"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                <br />
+                Etiam sed augue vitae ex vulputate venenatis.
+              </div>
+              <!--layer2-->
+              <div
+                class="link tp-caption slideup slideup"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeInQuad"
+              >
+                <div class="download-btn-sec">
+                  <div class="download-btn">
+                    <a href="#">
+                      <img src="./images/icons/playstore.svg" />
+                      <div class="text">
+                        <span
+                          >Get it on the <br /><strong
+                            >Google Play</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="download-btn">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                    >
+                      <img src="{% static 'images/icons/app.svg' %}" />
+                      <div class="text">
+                        <span
+                          >Available on the <br /><strong
+                            >App Store</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--layer 3-->
+            </div>
+          </li>
+          <!--Slide-->
+          <li
+            data-transition="random"
+            data-slotamount="7"
+            data-masterspeed="200"
+            class="first-slide"
+          >
+            <!--Main Image-->
+            <img
+              src="{% static 'images/slider/homepage1/banner-3.jpg' %}"
+              alt="Main Image 3"
+              data-bgfit="cover"
+              data-bgposition="center top"
+              data-bgrepeat="no-repeat"
+            />
+            <!--Main Image-->
+            <div class="container">
+              <div
+                class="heading tp-caption random fade"
+                data-speed="3000"
+                data-start="500"
+                data-easing="Cubic.easeInOut"
+              >
+                one-stop solution <br />
+                medical services
+              </div>
+              <!--layer1-->
+              <div
+                class="para tp-caption slideleft incube"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeOutBounce"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                <br />
+                Etiam sed augue vitae ex vulputate venenatis.
+              </div>
+              <!--layer2-->
+              <div
+                class="link tp-caption slideup slideup"
+                data-speed="3000"
+                data-start="200"
+                data-easing="easeInQuad"
+              >
+                <div class="download-btn-sec">
+                  <div class="download-btn">
+                    <a href="#">
+                      <img src="{% static 'images/icons/playstore.svg' %}" />
+                      <div class="text">
+                        <span
+                          >Get it on the <br /><strong
+                            >Google Play</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="download-btn">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                    >
+                      <img src="{% static 'images/icons/app.svg' %}" />
+                      <div class="text">
+                        <span
+                          >Available on the <br /><strong
+                            >App Store</strong
+                          ></span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--layer 3-->
+            </div>
+          </li>
+
+          <!--Slide-->
+        </ul>
+      </div>
+    </section>
+
+    <section class="row quick_blocks_row quick_blocks_row_home2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 quick_block emmergency">
+            <div class="row m0 inner">
+              <div class="row heading m0">
+                <h5>quick help</h5>
+                <h3>Emergency cases</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et
+                fringilla.
+              </p>
+              <a href="contact.html">CONTACT US NOW</a>
+            </div>
+          </div>
+          <div class="col-sm-4 quick_block branches">
+            <div class="row m0 inner">
+              <div class="row heading m0">
+                <h5>in your country</h5>
+                <h3>263 branches</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et
+                fringilla.
+              </p>
+              <a href="contact.html">nearest location</a>
+            </div>
+          </div>
+          <div class="col-sm-4 quick_block bill_payments">
+            <div class="row m0 inner">
+              <div class="row heading m0">
+                <h5>smooth and easy</h5>
+                <h3>online bill payments</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectet uam porttitor, nunc et
+                fringilla.
+              </p>
+              <a href="contact.html">pay your bill now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row service_tab">
+      <div class="container">
+        <div class="row titleRow">
+          <h5>GET WELL SOON</h5>
+          <h2>MEDICALPRO SERVICES</h2>
+        </div>
+        <div class="row">
+          <!-- Nav tabs -->
+          <ul
+            class="nav nav-tabs nav-justified"
+            role="tablist"
+            id="service_tab"
+          >
+            <li role="presentation" class="active">
+              <a
+                href="#heart_surgery"
+                aria-controls="heart_surgery"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>heart surgery</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#dna_testing"
+                aria-controls="dna_testing"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>dna testing</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#gen_treatment"
+                aria-controls="gen_treatment"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>gen treatment</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#emergency_care"
+                aria-controls="emergency_care"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>emergency care</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#ear_treatment"
+                aria-controls="ear_treatment"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>ear treatment</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#dental_care"
+                aria-controls="dental_care"
+                role="tab"
+                data-toggle="tab"
+                ><span></span>dental care</a
+              >
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="heart_surgery">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/heart.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>HEART SURGERY</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="dna_testing">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/DAN.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>Dna Testing</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="gen_treatment">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/general.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>General Treatment</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="emergency_care">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/ambulance.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>Emergency Care</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="ear_treatment">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/ear.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>Ear Treatment</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="dental_care">
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <img
+                    src="{% static 'images/pages/service/dental.jpg' %}"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="ts">trusted services</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row m0">
+                  <h3>Dental Care</h3>
+                  <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sque
+                    quis varius raesent lacinia elit nec nisl.
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <a href="single-service.html" class="view_all">read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row recent_post_home2">
+      <div class="container">
+        <div class="row titleRow">
+          <h5>What People Say</h5>
+          <h2>Our Testimonials</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 recent_post">
+            <div class="row m0 inner">
+              <div class="postText row m0">
+                Etiam tristique sagittis pulvinar. Cras scelerisque dui ut,
+                bibendum ante. dit neque eget lobortis. Nam eleifend
+                sollicitudin nulla quis Interdum et malesuada fames.
+              </div>
+              <div class="media authorMeta">
+                <div class="media-left">
+                  <img src="{% static 'images/pages/doctors/doc-1.jpg' %}" alt="" />
+                </div>
+                <div class="media-body media-middle">
+                  <h5>Johna shah</h5>
+                  <!--<div class="row designation">johan@gmail.com</div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 recent_post">
+            <div class="row m0 inner">
+              <div class="postText row m0">
+                Etiam tristique sagittis pulvinar. Cras scelerisque dui ut,
+                bibendum ante. dit neque eget lobortis. Nam eleifend
+                sollicitudin nulla quis Interdum et malesuada fames.
+              </div>
+              <div class="media authorMeta">
+                <div class="media-left">
+                  <img src="{% static 'images/pages/doctors/doc-2.jpg' %}" alt="" />
+                </div>
+                <div class="media-body media-middle">
+                  <h5>Nikhil sharma</h5>
+                  <!--<div class="row designation">nikhil@gmail.com</div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 recent_post">
+            <div class="row m0 inner">
+              <div class="postText row m0">
+                Etiam tristique sagittis pulvinar. Cras scelerisque dui ut,
+                bibendum ante. dit neque eget lobortis. Nam eleifend
+                sollicitudin nulla quis Interdum et malesuada fames.
+              </div>
+              <div class="media authorMeta">
+                <div class="media-left">
+                  <img src="{% static 'images/pages/doctors/doc-3.jpg' %}" alt="" />
+                </div>
+                <div class="media-body media-middle">
+                  <h5>Ankit shah</h5>
+                  <div class="row designation">ankit@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row book_banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-9">
+            <div class="row m0">
+              <h3 class="bannerTitle">
+                ONLINE HASSLE FREE Appointment BOOKING
+              </h3>
+              <h5>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque lacinia, ipsum eu vulputate pulvinar,
+              </h5>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="row m0">
+              <a
+                href="#"
+                data-toggle="modal"
+                data-target="#appointment"
+                class="view_all"
+                >book your appointment</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="footer-menus">
+          <div class="social-icons">
+            <h4>Fllow Us</h4>
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="download-app">
+            <h4>Downloads</h4>
+            <div class="download-btn-sec">
+              <div class="download-btn">
+                <a href="#">
+                  <img src="{% static 'images/icons/playstore.svg' %}" />
+                  <div class="text">
+                    <span
+                      >Get it on the <br /><strong>Google Play</strong></span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div class="download-btn">
+                <a
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                  <img src="{% static 'images/icons/app.svg' %}" />
+                  <div class="text">
+                    <span
+                      >Available on the <br /><strong>App Store</strong></span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-address">
+            <h4>contact Info</h4>
+            <div class="media address_line">
+              <div class="media-left icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div class="media-body address_text">Kathmandu,Nepal</div>
+            </div>
+            <div class="media address_line">
+              <div class="media-left icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="media-body address_text">info@aladoc.com</div>
+            </div>
+            <div class="media address_line">
+              <div class="media-left icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="media-body address_text">98000000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyrights">
+            &copy; <a href="">ALADOC 2020</a>. Made by DeepMind
+            Creation.
+          </div>
+          
+        </div>
+
+          <br>
+          <center>
+          <div class="copyrights">
+             <a href="privacy/">Privacy and Policy</a>
+          </div>
+          </center>
+        
+      </div>
+    </footer>
+
+    <!-- appointment-Modal -->
+    <div
+      class="modal fade"
+      id="appointment"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">
+              Download Our App
+            </h2>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="download-btn">
+              <a href="#">
+                <img src="{% static 'images/icons/playstore.svg' %}" />
+                <div class="text">
+                  <span>Get it on the <br /><strong>Google Play</strong></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div
+      class="modal fade coming-soon"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+
+    <!--jQuery, Bootstrap and other vendor JS-->
+
+    <!--jQuery-->
+    <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+
+    <!--Bootstrap JS-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!--Owl Carousel-->
+    <script src="{% static 'vendors/owl.carousel/js/owl.carousel.min.js' %}"></script>
+
+    <!--Counter Up-->
+    <script src="{% static 'vendors/counterup/jquery.counterup.min.js' %}"></script>
+
+    <!--Waypoints-->
+    <script src="{% static 'vendors/waypoints/waypoints.min.js' %}"></script>
+
+    <!--Bootstrap Date-->
+    <script src="{% static 'vendors/bootstrap-datepicker/js/bootstrap-datepicker.js' %}"></script>
+
+    <!--FlexSlider-->
+    <script src="{% static 'vendors/flexslider/jquery.flexslider-min.js' %}"></script>
+
+    <!--RV-->
+    <script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+    <!--Strella JS-->
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="{% static 'js/revs.js' %}"></script>
+  </body>
+</html>
